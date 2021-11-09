@@ -1,0 +1,208 @@
+$primarycolor: #E0C3FC;
+
+body,html{
+    background-color: $primarycolor;
+    margin: 0;
+    padding: 0;
+
+    #root{
+        // background-color: white;
+    }
+
+    // CABEZERA
+    header{
+        padding: 0.3em 0;
+        width: 100%;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(auto-fill, 1fr);
+        grid-template-areas: '.  tit  bar bar bar nav nav  .';
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 0 0.4em rgba(0,0,0,0.2);
+        color:inherit;
+    }
+    
+    .logo {
+        grid-area: tit;
+    }
+    
+    .logo-img {
+        display: block;
+        width: 38px;
+        height: 38px;
+        background: url(../images/logo.jpg);
+        background-size: contain;
+        box-shadow: 0 2px 4px 0 rgb(37 50 56 / 10%);
+        border-radius: 10px;
+    }
+    
+    header .msg {
+        grid-area: user;
+        font-size: 0.7em;
+        color: darkgrey;
+    }
+    
+    /* Nav */
+    nav {
+        /* border: 1px solid white; */
+        height: 100%;
+        grid-area: nav;
+        width: auto;
+        display: flex;
+        align-content: center;
+        color: inherit;
+    }
+    
+    .lines {
+        /* border: 1px solid white; */
+        display: none;
+    }
+
+    // Serachbar
+
+    .search-bar{
+        grid-area: bar;
+        // width: 100%;
+    }
+
+    .search-bar .search-bar-wrapper{
+        margin: 2em auto ;
+        width: 100%;
+        /* background: #DFDFDF; */
+        border-radius: 5px;
+    }
+    
+    .search-bar .search-bar-input{
+        background: white;
+        width: 100%;
+        border-radius: 20px;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        padding: 0 0 0 0.4em;
+        // box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
+        // border: 1px solid black;
+    }
+    
+    .search-bar #search-shop{
+        height: 2em;
+        width: 99%;
+        outline: none;
+        border: none;
+        border-radius: 20px;
+        padding: 0 0 0 20px; 
+        padding-left: 10px;
+        font-size: 0.9em;
+        // box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+    }
+    
+    .search-bar .search-bar-input ul{
+        margin: 0 auto;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    } 
+    
+    .search-bar .search-bar-input li{
+        margin: 0;
+        list-style: none;
+        color: #929292;
+        width: 100%;
+        border-radius: 5px;
+        padding: 5px 5px;
+        background-color: #DFDFDF;
+    }
+    
+    .wrapper li:hover{
+        background: #efefef;
+    }
+    
+    .search-bar .search-bar-input .material-icons-outlined{
+        background-image: url(../images/search_black_24dp.svg);
+        background-size: cover;
+        background-position: center;
+        height: 25px;
+        width: 25px;
+    }
+    
+    header ul {
+        /* border: 1px solid white; */
+        color: inherit;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        padding: 0;
+    }
+    
+    header li {
+        height: 100%;
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+    }
+    
+    nav a {
+        height: 100%;
+        width: 100%;
+        padding: 0 0.8em;
+        text-decoration: none;
+        color: #58AF9B;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.9em;
+    }
+    
+    a p+div {
+        width: 2%;
+        position: relative;
+        top: -5px;
+        background-color: #58AF9B;
+        transition: width 0.7s, height 4s;
+    }
+    
+    a .active {
+        width: 80%;
+        height: 2px;
+    }
+    
+    nav a:hover div {
+        width: 80%;
+        height: 2px;
+    }
+
+
+    // Cartas
+
+    .cards{
+        background-color: white;
+        display: flex;
+        height: 90vh;
+    }
+    .card{
+        min-width: 100px;
+        max-height: 200px;
+        margin: 0.5em;
+        width: fit-content;
+        padding: 0 1em;
+        background-color: #F9F3FE;
+        border: 1px solid #FDE7FB;
+        display: grid;
+        grid-gap: 0 10px;
+        grid-template-areas: 
+        '. tit tit'
+        'img tit tit'
+        'img tit tit'
+        'img res res'
+        'img res res'
+        '. res res';
+        border-radius: 5px;
+    }
+}

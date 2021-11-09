@@ -1,0 +1,166 @@
+body, html {
+  background-color: #E0C3FC;
+  margin: 0;
+  padding: 0;
+  /* Nav */
+}
+body header, html header {
+  padding: 0.3em 0;
+  width: 100%;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, 1fr);
+  grid-template-areas: ".  tit  bar bar bar nav nav  .";
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 0.4em rgba(0, 0, 0, 0.2);
+  color: inherit;
+}
+body .logo, html .logo {
+  grid-area: tit;
+}
+body .logo-img, html .logo-img {
+  display: block;
+  width: 38px;
+  height: 38px;
+  background: url(../images/logo.jpg);
+  background-size: contain;
+  box-shadow: 0 2px 4px 0 rgba(37, 50, 56, 0.1);
+  border-radius: 10px;
+}
+body header .msg, html header .msg {
+  grid-area: user;
+  font-size: 0.7em;
+  color: darkgrey;
+}
+body nav, html nav {
+  /* border: 1px solid white; */
+  height: 100%;
+  grid-area: nav;
+  width: auto;
+  display: flex;
+  align-content: center;
+  color: inherit;
+}
+body .lines, html .lines {
+  /* border: 1px solid white; */
+  display: none;
+}
+body .search-bar, html .search-bar {
+  grid-area: bar;
+}
+body .search-bar .search-bar-wrapper, html .search-bar .search-bar-wrapper {
+  margin: 2em auto;
+  width: 100%;
+  /* background: #DFDFDF; */
+  border-radius: 5px;
+}
+body .search-bar .search-bar-input, html .search-bar .search-bar-input {
+  background: white;
+  width: 100%;
+  border-radius: 20px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  padding: 0 0 0 0.4em;
+}
+body .search-bar #search-shop, html .search-bar #search-shop {
+  height: 2em;
+  width: 99%;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  padding: 0 0 0 20px;
+  padding-left: 10px;
+  font-size: 0.9em;
+}
+body .search-bar .search-bar-input ul, html .search-bar .search-bar-input ul {
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+body .search-bar .search-bar-input li, html .search-bar .search-bar-input li {
+  margin: 0;
+  list-style: none;
+  color: #929292;
+  width: 100%;
+  border-radius: 5px;
+  padding: 5px 5px;
+  background-color: #DFDFDF;
+}
+body .wrapper li:hover, html .wrapper li:hover {
+  background: #efefef;
+}
+body .search-bar .search-bar-input .material-icons-outlined, html .search-bar .search-bar-input .material-icons-outlined {
+  background-image: url(../images/search_black_24dp.svg);
+  background-size: cover;
+  background-position: center;
+  height: 25px;
+  width: 25px;
+}
+body header ul, html header ul {
+  /* border: 1px solid white; */
+  color: inherit;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+body header li, html header li {
+  height: 100%;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body nav a, html nav a {
+  height: 100%;
+  width: 100%;
+  padding: 0 0.8em;
+  text-decoration: none;
+  color: #58AF9B;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9em;
+}
+body a p + div, html a p + div {
+  width: 2%;
+  position: relative;
+  top: -5px;
+  background-color: #58AF9B;
+  transition: width 0.7s, height 4s;
+}
+body a .active, html a .active {
+  width: 80%;
+  height: 2px;
+}
+body nav a:hover div, html nav a:hover div {
+  width: 80%;
+  height: 2px;
+}
+body .cards, html .cards {
+  background-color: white;
+  display: flex;
+  height: 90vh;
+}
+body .card, html .card {
+  min-width: 100px;
+  max-height: 200px;
+  margin: 0.5em;
+  width: fit-content;
+  padding: 0 1em;
+  background-color: #F9F3FE;
+  border: 1px solid #FDE7FB;
+  display: grid;
+  grid-gap: 0 10px;
+  grid-template-areas: ". tit tit" "img tit tit" "img tit tit" "img res res" "img res res" ". res res";
+  border-radius: 5px;
+}
+
+/*# sourceMappingURL=index.css.map */
