@@ -16,8 +16,8 @@ export default class Navbar extends Component {
                         <div className="line3"></div>
                     </div>
                     <ul className="nav-links">
+                        <li><Link to="/user">Regístrate o inicia sesión</Link></li>
                         <li><Link to="/create">Anunciar Tienda</Link></li>
-                        <li><Link to="/user">Crear usuario</Link></li>
                     </ul>
                 </nav>
             </header>
